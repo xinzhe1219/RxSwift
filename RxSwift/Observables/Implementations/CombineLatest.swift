@@ -57,9 +57,8 @@ class CombineLatestSink<O: ObserverType>
         }
         else {
             var allOthersDone = true
-            let __arity = _arity + 1
             
-            for i in 0 ..< __arity {
+            for i in 0 ..< _arity {
                 if i != index && !_isDone[i] {
                     allOthersDone = false
                     break
